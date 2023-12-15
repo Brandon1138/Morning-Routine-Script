@@ -14,9 +14,17 @@ for url in urls:
     webbrowser.open_new_tab(url)
 
 # Launch Microsoft To Do
-os.startfile("ms-todo:")
+try:
+    os.startfile("ms-todo:")
+except Exception as e:
+    print(f"Failed to open Microsoft To Do: {e}")
 # Launch Outlook
-os.startfile("outlookcal:")
+try:
+    os.startfile("outlookcal:")
+except Exception as e:
+    print(f"Failed to open Outlook: {e}")
 # Launch Spotify
-os.startfile("spotify:")
-
+try:
+    os.startfile("spotify:")
+except Exception as e:
+    print(f"Failed to open Spotify: {e}")
